@@ -1,18 +1,15 @@
-# Personal Loan Website
+PERSONAL LOAN WEBSITE - UPI VERSION
 
-Files:
-- index.html
-- style.css
+UPI ID configured: paytmqr8vcpabg53u@paytm
+Amount: ₹699
+Purpose shown in UPI intent: Personal Loan Assistance Service Fee
 
 GitHub Pages:
-1. Create a public GitHub repository.
-2. Upload both files to the repository root.
-3. Repository > Settings > Pages.
-4. Source: Deploy from a branch.
-5. Branch: main, folder: / (root).
-6. Save.
-7. Open the published URL shown by GitHub Pages.
+Settings > Pages > Deploy from a branch > main > / (root) > Save.
 
-WhatsApp number is already set to +91 99902 42919.
-
-Important: This is a static informational/lead-generation website. Do not promise guaranteed loan approval. Replace the brand name and legal/contact details with your actual business details before publishing.
+Important:
+- The UPI button opens a UPI-compatible payment app using a payment intent.
+- Always verify the payment received in your own merchant/bank/UPI account before treating an application as paid.
+- Do not claim guaranteed loan approval.
+- Do not ask customers for OTP, UPI PIN, CVV, PIN, or passwords.
+- Publish clear refund/cancellation terms before accepting fees.

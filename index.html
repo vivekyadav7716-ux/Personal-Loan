@@ -3,68 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Personal Loan Assistance - Check eligibility and required documents.">
-<title>Personal Loan Assistance</title>
+<title>LoanAssist | Personal Loan Assistance</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <nav class="nav">
-    <div class="brand">Loan<span>Assist</span></div>
-    <a class="nav-btn" href="https://wa.me/919990242919?text=Hello%2C%20I%20want%20to%20know%20about%20personal%20loan%20eligibility." target="_blank">WhatsApp Us</a>
-  </nav>
-</header>
+<header><nav><div class="brand">Loan<span>Assist</span></div>
+<a class="wa" href="https://wa.me/919990242919?text=Hello%2C%20I%20want%20personal%20loan%20assistance." target="_blank">WhatsApp Us</a></nav></header>
 
-<main>
 <section class="hero">
-  <div>
-    <div class="badge">PERSONAL LOAN ASSISTANCE</div>
-    <h1>Personal Loan ke liye<br><span>Apply karne mein madad.</span></h1>
-    <p>Eligibility, required documents aur application process ki basic information ek jagah. Loan approval lender ki eligibility aur verification par depend karta hai.</p>
-    <a class="cta" href="https://wa.me/919990242919?text=Hello%2C%20I%20want%20to%20check%20personal%20loan%20eligibility." target="_blank">💬 WhatsApp par baat karein</a>
-  </div>
-  <div class="card highlight">
-    <div class="icon">₹</div>
-    <h3>Personal Loan</h3>
-    <p>Amount, rate aur tenure lender ki policy, income, credit profile aur eligibility ke according vary kar sakte hain.</p>
-    <div class="small">No guaranteed approval claim • Subject to lender verification</div>
-  </div>
+<div><div class="badge">PERSONAL LOAN ASSISTANCE</div>
+<h1>Personal Loan ke liye <span>apply karein.</span></h1>
+<p>Apni basic details submit karein. Hum application process aur required documents ke baare mein guidance denge.</p>
+<a class="btn" href="#apply">Apply Now</a></div>
+<div class="hero-card"><b>₹699 Service Fee</b><p>Application assistance ke liye. Payment loan approval ki guarantee nahi hai.</p></div>
+</section>
+
+<section class="section" id="apply">
+<h2>Customer Details</h2>
+<p class="sub">Form submit karne se pehle details carefully check karein.</p>
+<form id="loanForm">
+<div class="fields">
+<label>Full Name<input id="name" required></label>
+<label>Mobile Number<input id="mobile" type="tel" pattern="[0-9]{10}" maxlength="10" required></label>
+<label>Employment Type<select id="employment" required><option value="">Select</option><option>Salaried</option><option>Self Employed</option><option>Business</option><option>Other</option></select></label>
+<label>Monthly Income (₹)<input id="income" type="number" min="0" required></label>
+<label>Loan Amount Required (₹)<input id="amount" type="number" min="1" required></label>
+<label>City<input id="city" required></label>
+<label class="full">Email (Optional)<input id="email" type="email"></label>
+</div>
+<label class="check"><input type="checkbox" required> I agree to be contacted regarding my loan assistance request and confirm that the information provided is accurate.</label>
+<button class="btn" type="submit">Submit Details</button>
+</form>
+<div id="result" class="result" hidden></div>
 </section>
 
 <section class="section">
-  <h2>Documents Required</h2>
-  <p class="sub">Generally personal loan application mein ye documents maange ja sakte hain. Exact requirement lender ke hisaab se alag ho sakti hai.</p>
-  <div class="grid">
-    <div class="doc"><b>🪪 PAN Card</b><span>Valid PAN details</span></div>
-    <div class="doc"><b>🆔 Aadhaar / KYC</b><span>Identity & address proof</span></div>
-    <div class="doc"><b>💼 Salary Slips</b><span>Usually recent salary slips for salaried applicants</span></div>
-    <div class="doc"><b>🏦 Bank Statement</b><span>Recent bank statements may be required</span></div>
-    <div class="doc"><b>📄 Employment Proof</b><span>Company/occupation details where applicable</span></div>
-    <div class="doc"><b>🧾 Income Proof</b><span>ITR/business documents may apply for self-employed applicants</span></div>
-  </div>
+<h2>Documents Generally Required</h2>
+<div class="docs">
+<div><b>🪪 PAN Card</b><small>Identity/KYC requirement may apply.</small></div>
+<div><b>🆔 Aadhaar / KYC</b><small>Identity and address verification.</small></div>
+<div><b>💼 Salary Slips</b><small>Recent slips for salaried applicants where required.</small></div>
+<div><b>🏦 Bank Statement</b><small>Recent statement may be requested.</small></div>
+<div><b>📄 Employment / Business Proof</b><small>Depending on applicant profile.</small></div>
+<div><b>🧾 Income Proof / ITR</b><small>May apply to self-employed applicants.</small></div>
+</div>
 </section>
 
-<section class="section steps">
-  <h2>Simple Process</h2>
-  <div class="stepgrid">
-    <div><strong>01</strong><h3>WhatsApp</h3><p>Apni basic requirement share karein.</p></div>
-    <div><strong>02</strong><h3>Eligibility</h3><p>Available information ke basis par guidance lein.</p></div>
-    <div><strong>03</strong><h3>Documents</h3><p>Lender ke required documents prepare karein.</p></div>
-    <div><strong>04</strong><h3>Application</h3><p>Final decision lender ki verification par hota hai.</p></div>
-  </div>
-</section>
-
-<section class="contact">
-  <h2>Personal Loan ke baare mein baat karein</h2>
-  <p>WhatsApp par message bhejiye.</p>
-  <a class="cta light" href="https://wa.me/919990242919?text=Hello%2C%20I%20want%20personal%20loan%20assistance." target="_blank">WhatsApp: +91 99902 42919</a>
+<section class="fee">
+<h2>₹699 Service / Processing Fee</h2>
+<p>The fee is for assistance/application processing. <strong>Payment does not guarantee loan approval, disbursal, amount, interest rate or tenure.</strong></p>
+<div class="paybox"><span>Amount</span><strong>₹699</strong>
+<a class="btn" href="upi://pay?pa=paytmqr8vcpabg53u@paytm&pn=LoanAssist&am=699&cu=INR&tn=Personal%20Loan%20Assistance%20Service%20Fee" onclick="return confirmPayment()">Pay ₹699 via UPI</a>
+<p class="tiny">Payment gateway is not connected yet. Replace the button link with your verified payment gateway checkout URL before accepting payments.</p></div>
 </section>
 
 <section class="notice">
-  <b>Important:</b> Ye website general information aur assistance ke liye hai. Loan approval, amount, interest rate aur tenure guaranteed nahi hain. Final decision respective lender ki eligibility, KYC, credit assessment, documentation aur verification par depend karta hai. Kisi bhi OTP, PIN, CVV ya password ko WhatsApp par share na karein.
+<b>Important:</b> Final loan decision is made by the respective lender after eligibility, KYC, credit assessment, documentation and verification. Do not share OTP, PIN, CVV, password or UPI PIN with anyone. Display your refund/cancellation terms clearly before payment.
 </section>
-</main>
-
 <footer>© 2026 LoanAssist • Personal Loan Assistance</footer>
+
+<script>
+document.getElementById('loanForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const mobile=document.getElementById('mobile').value.trim();
+  const employment=document.getElementById('employment').value;
+  const income=document.getElementById('income').value;
+  const amount=document.getElementById('amount').value;
+  const city=document.getElementById('city').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const text=`Hello, I want personal loan assistance.%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(mobile)}%0AEmployment: ${encodeURIComponent(employment)}%0AMonthly Income: ₹${encodeURIComponent(income)}%0ALoan Amount: ₹${encodeURIComponent(amount)}%0ACity: ${encodeURIComponent(city)}%0AEmail: ${encodeURIComponent(email)}`;
+  const result=document.getElementById('result');
+  result.hidden=false;
+  result.innerHTML=`<b>Details ready.</b><br>Please continue on WhatsApp to confirm your request.<br><a class="btn" href="https://wa.me/919990242919?text=${text}" target="_blank">Continue on WhatsApp</a>`;
+  result.scrollIntoView({behavior:'smooth'});
+});
+function confirmPayment(){
+  return confirm("Aap ₹699 service/processing fee ke liye UPI payment app open kar rahe hain. Payment loan approval ki guarantee nahi hai. Continue?");
+}
+</script>
 </body>
 </html>
