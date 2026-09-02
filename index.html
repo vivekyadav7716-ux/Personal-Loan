@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vivek Loan Services | Personal Loan Assistance</title>
+<meta name="description" content="Personal loan assistance and application support. Eligibility depends on lender policies.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#10233f;background:#f6f9fc;line-height:1.5}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 14px #00000012}
+.logo{font-size:22px;font-weight:800;color:#0b57d0;letter-spacing:-.3px}.navlinks a{margin-left:20px;text-decoration:none;color:#10233f;font-weight:600}
+.hero{padding:75px 7%;background:linear-gradient(135deg,#071d49,#0b57d0);color:#fff}
+.hero h1{font-size:48px;line-height:1.1;margin:0 0 18px;max-width:720px}.hero p{font-size:19px;max-width:680px;opacity:.95}
+.btn{display:inline-block;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:800;margin:8px 8px 0 0}.primary{background:#fff;color:#0b57d0}.whatsapp{background:#18a558;color:#fff}
+section{padding:55px 7%}.title{text-align:center;margin-bottom:30px}.title h2{font-size:32px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;padding:25px;border-radius:16px;box-shadow:0 8px 25px #10233f10}.card h3{margin-top:0;color:#0b57d0}
+.apply{background:#fff;border-radius:18px;padding:28px;max-width:760px;margin:auto;box-shadow:0 8px 30px #10233f12}
+input,select,textarea{width:100%;padding:13px;margin:7px 0 14px;border:1px solid #ccd6e3;border-radius:9px;font-size:15px}
+button{border:0;cursor:pointer;padding:14px 20px;border-radius:9px;background:#0b57d0;color:#fff;font-weight:800;width:100%}
+.note{font-size:13px;color:#64748b}.contact{text-align:center;background:#eef5ff}
+footer{padding:28px 7%;background:#10233f;color:#dce7f7;text-align:center;font-size:13px}
+@media(max-width:750px){.hero h1{font-size:36px}.grid{grid-template-columns:1fr}.navlinks{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Vivek Loan Services</div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#calculator">Calculator</a><a href="#eligibility">Eligibility</a><a href="#apply">Apply</a></div>
+</nav>
+
+<header class="hero">
+  <h1>Personal Loan ke liye simple aur professional assistance</h1>
+  <p>Loan application process ko samajhne aur suitable lender options ke liye assistance paayen. Final approval lender ki eligibility, documents aur credit profile par depend karta hai.</p>
+  <a class="btn primary" href="#apply">Apply Now</a>
+  <a class="btn whatsapp" href="https://wa.me/918447242919?text=Namaste%2C%20mujhe%20personal%20loan%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank">WhatsApp Us</a>
+</header>
+
+
+<section id="calculator">
+<div class="title"><h2>Quick Loan Calculator</h2><p>Estimated EMI only. Final terms depend on the lender.</p></div>
+<div class="apply">
+<label>Loan Amount (₹)</label><input id="calcAmount" type="number" value="200000" min="1000">
+<label>Interest Rate (% p.a.)</label><input id="calcRate" type="number" value="14" min="0" step="0.1">
+<label>Tenure (months)</label><input id="calcTenure" type="number" value="24" min="1">
+<div style="background:#eef5ff;padding:18px;border-radius:12px;margin:10px 0 18px">
+<strong>Estimated EMI: </strong><span id="emi">₹9,602</span>
+</div>
+<button type="button" onclick="calcEMI()">Calculate EMI</button>
+<p class="note">This calculator is for illustration and is not an offer or guarantee of credit.</p>
+</div>
+</section>
+
+<section id="services">
+<div class="title"><h2>Our Services</h2><p>Loan application support, subject to lender terms.</p></div>
+<div class="grid">
+<div class="card"><h3>Personal Loan</h3><p>Personal loan options aur application process ke baare mein guidance.</p></div>
+<div class="card"><h3>Eligibility Check</h3><p>Basic information ke basis par preliminary eligibility guidance.</p></div>
+<div class="card"><h3>Application Support</h3><p>Documents aur application process ko samajhne mein assistance.</p></div>
+</div>
+</section>
+
+<section id="eligibility">
+<div class="title"><h2>Basic Eligibility</h2><p>Actual criteria lender ke according alag ho sakte hain.</p></div>
+<div class="grid">
+<div class="card"><h3>Age & Income</h3><p>Applicant ki age aur regular income lender criteria ke according honi chahiye.</p></div>
+<div class="card"><h3>Credit Profile</h3><p>Credit history/score loan approval, amount aur pricing ko affect kar sakta hai.</p></div>
+<div class="card"><h3>Documents</h3><p>KYC, income aur bank-related documents lender ke requirements ke hisaab se lag sakte hain.</p></div>
+</div>
+</section>
+
+<section id="apply">
+<div class="title"><h2>Apply for Assistance</h2><p>Form submit karne par WhatsApp par message open hoga.</p></div>
+<form class="apply" onsubmit="sendWhatsApp(event)">
+<label>Name</label><input id="name" required placeholder="Aapka naam">
+<label>Mobile Number</label><input id="phone" required inputmode="numeric" placeholder="10-digit mobile number">
+<label>Loan Amount</label><input id="amount" placeholder="Example: ₹2,00,000">
+<label>Employment Type</label>
+<select id="job"><option>Salaried</option><option>Self Employed</option><option>Business</option><option>Other</option></select>
+<label>Message</label><textarea id="msg" rows="4" placeholder="Apni requirement batayein"></textarea>
+<button type="submit">Submit & Continue on WhatsApp</button>
+<p class="note">Privacy note: Sensitive documents ya OTP website/WhatsApp par share na karein. Loan approval guaranteed nahi hai.</p>
+</form>
+</section>
+
+<section class="contact">
+<h2>Need Help?</h2>
+<p>WhatsApp: <strong>+91 84472 42919</strong></p>
+<a class="btn whatsapp" href="https://wa.me/918447242919" target="_blank">Chat on WhatsApp</a>
+</section>
+
+<footer>
+<p>© 2026 Vivek Loan Services. All rights reserved.</p>
+<p>Disclaimer: We are not a bank or lender unless expressly stated. Loan approval, interest rate, tenure and disbursal are subject to the respective lender's policies and verification. No approval is guaranteed.</p>
+</footer>
+
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value, p=document.getElementById('phone').value,
+ a=document.getElementById('amount').value, j=document.getElementById('job').value,
+ m=document.getElementById('msg').value;
+ const text=`Namaste, mujhe personal loan assistance chahiye.%0AName: ${encodeURIComponent(n)}%0AMobile: ${encodeURIComponent(p)}%0ALoan Amount: ${encodeURIComponent(a)}%0AEmployment: ${encodeURIComponent(j)}%0AMessage: ${encodeURIComponent(m)}`;
+ window.open('https://wa.me/918447242919?text='+text,'_blank');
+}
+
+function calcEMI(){
+ const P=Number(document.getElementById('calcAmount').value)||0;
+ const annual=Number(document.getElementById('calcRate').value)||0;
+ const N=Number(document.getElementById('calcTenure').value)||1;
+ const r=annual/12/100;
+ const emi=r===0?P/N:P*r*Math.pow(1+r,N)/(Math.pow(1+r,N)-1);
+ document.getElementById('emi').textContent='₹'+Math.round(emi).toLocaleString('en-IN');
+}
+calcEMI();
+
+</script>
+</body>
+</html>
